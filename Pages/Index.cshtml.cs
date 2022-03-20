@@ -26,11 +26,13 @@ namespace Zad2.Pages
         }
         public IActionResult OnPost()
         {
-            if (!ModelState.IsValid)
-            {
-                return Page();
-            }
-            return RedirectToPage("./Privacy");
+            //if (!ModelState.IsValid)
+            //{
+            //    return Page();
+            //}
+            (ViewData["Message"], ViewData["MessageClass"]) = FizzBuzz.getOutput();
+            return Page();
+
         }
     }
 }

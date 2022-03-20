@@ -9,9 +9,15 @@
     <form method="post">
         <span asp-validation-for="FizzBuzz.Number" class="text-danger"></span>
         <form method="post">
-        <label asp-for="FizzBuzz.Number"></label>
-        <input asp-for="FizzBuzz.Number" /><br />
-        <button type="submit">Zatwierdź</button>
+            <label asp-for="FizzBuzz.Number"></label>
+            <input asp-for="FizzBuzz.Number" /><br />
+            <button type="submit">Zatwierdź</button>
+        </form>
     </form>
-    </form>
+    
 </div>
+@{
+    <div class="alert alert-@ViewData["MessageClass"]">
+            @ViewData["Message"]
+    </div>
+}
